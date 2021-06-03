@@ -3,10 +3,9 @@
 
 $session = new Session();
 
+
+//method set
 $session->nom = 'Nono';
-$session->nom = 'Wiwi';
-$key = 'nom';
-$value = 'Wiwi';
 
 ////method get(voir class Session)
 var_dump($session->nom);

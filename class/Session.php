@@ -6,8 +6,12 @@ class Session{
 
 
 
+    public function addAttribut($key, $value){
+        return $this->attributes[$key] = $value;
+    }
+
     public function updateAttribut($key, $value){
-        return $this->attribut;
+        return $this->attributes[$key] = $value;
     }
 
 //methode magique __get
@@ -16,9 +20,9 @@ class Session{
     }
 
 
-//methode magique __set
+//methode magique __set (même fonction que fonction addAttribut)
 public function __set($key, $value){
-    $this->attributes[$key] = $value;
+    $this->addAttribut[$key] = $value;
     }
 
 //methode magique __isset
